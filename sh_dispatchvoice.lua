@@ -1,5 +1,5 @@
 PLUGIN.name = "Dispatch Fix"
-PLUGIN.desc = "Adds /DispatchVoice command"
+PLUGIN.desc = "Fixed /dispatch"
 PLUGIN.author = "Stalker"
 
     function Ligma(ply,msg)
@@ -133,14 +133,11 @@ do
 
 	function COMMAND:OnRun(client, msg)
         if (client:IsCombine()) then
-            for k, v in ipairs({"SCN", "DvL", "SeC"}) do
-            if Schema:IsCombineRank(client:Name(), v) or client:Team() == FACTION_OTA then 
-                
-            end
+            rank = ({"SCN", "DvL", "SeC"})
+            if Schema:IsCombineRank(client:Name(), "SCN") or client:Team() == FACTION_OTA or Schema:IsCombineRank(client:Name(), "DvL") or Schema:IsCombineRank(client:Name(), "SeC") or Schema:IsCombineRank(client:Name(), "CmD") then   
+                Ligma(client,msg)     
         end
-
-    end
-    Ligma(client,msg)
 end
-	ix.command.Add("DispatchVoice", COMMAND)
 end
+ix.command.Add("DispatchVoice", COMMAND)
+end 
