@@ -12,3 +12,6 @@ Adds a mask item that can hide your identity
 
 ## Passive Dispatch
 Adds some automatic dispatch messages that can add to the vibe.
+
+##  DispatchVoice
+Adds a seperate command for dispatch voices
