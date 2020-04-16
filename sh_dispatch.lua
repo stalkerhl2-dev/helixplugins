@@ -133,7 +133,6 @@ do
 
 	function COMMAND:OnRun(client, msg)
         if (client:IsCombine()) then
-            rank = ({"SCN", "DvL", "SeC"})
             if Schema:IsCombineRank(client:Name(), "SCN") or client:Team() == FACTION_OTA or Schema:IsCombineRank(client:Name(), "DvL") or Schema:IsCombineRank(client:Name(), "SeC") or Schema:IsCombineRank(client:Name(), "CmD") then   
                 Ligma(client,msg)     
         end
